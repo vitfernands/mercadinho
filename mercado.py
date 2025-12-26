@@ -100,10 +100,10 @@ def comprar_produto() -> None:
                     if quant:
                         item[produto] = quant + 1
                         print(f'O produto {produto.nome} agora possui {quant + 1} unidade no carrinho')
-                        tem_no_carrinho = True
+                        existe_no_carrinho = True
                         sleep(2)
                         menu()
-                if not tem_no_carrinho:
+                if not existe_no_carrinho:
                     prod = {produto: 1}
                     carrinho.append(prod)
                     print('Produto adicioando ao carrinho!')
