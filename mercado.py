@@ -53,7 +53,7 @@ def cadastrar_produto() -> None:
 
     produto = Produto(nome, preco)
 
-    produtos.append(Produto)
+    produtos.append(produto)
 
     print('Produto cadastrado com sucesso!')
     sleep(2)
@@ -133,7 +133,7 @@ def visualizar_carrinho() -> None:
         for item in carrinho:
             for dados in item.items():
                 print(dados[0])
-                print(f'Quantidade: dados[1]')
+                print(f'Quantidade: {dados[1]}')
                 print('-----------------------------------')
                 sleep(0.7)
     else:
@@ -151,7 +151,7 @@ def fechar_pedido() -> None:
         for item in carrinho:
             for dados in item.items():
                 print(dados[0])
-                print(f'Quantidade: dados[1]')
+                print(f'Quantidade: {dados[1]}')
                 valor_total += dados[0].preco * dados[1]
                 print('---------------------------------')
                 sleep(1)
